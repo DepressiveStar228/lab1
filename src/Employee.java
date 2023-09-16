@@ -20,4 +20,28 @@ public class Employee {
     void PrintEmpoyee(){
         System.out.println("ID: " + id + "\nName: " + name + "\nSurname: " + surname + "\nSalary: " + salary + "\n");
     }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(){
+        this.name = name;
+    }
+
+    public String getSurname(){
+        return surname;
+    }
+
+    public void setSurname(){
+        this.surname = surname;
+    }
+
+    public double getSalary(){
+        return salary;
+    }
+
+    public void setSalary(){
+        this.salary = salary;
+    }
 }
