@@ -24,7 +24,6 @@ public class Employee {
     public String getName(){
         return name;
     }
-
     public void setName(){
         this.name = name;
     }
@@ -32,7 +31,6 @@ public class Employee {
     public String getSurname(){
         return surname;
     }
-
     public void setSurname(){
         this.surname = surname;
     }
@@ -40,7 +38,6 @@ public class Employee {
     public double getSalary(){
         return salary;
     }
-
     public void setSalary(){
         this.salary = salary;
     }
