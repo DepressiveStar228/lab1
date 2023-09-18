@@ -4,7 +4,7 @@ public class Main {
             Employee emp = new Employee("Ryan", "Gosling", 1000);
             emp.PrintEmpoyee();
         }
-        catch(FieldLengthLimitException ex){
+        catch(CorrectDataException ex){
             System.out.println(ex.getMessage());
         }
 
@@ -12,7 +12,7 @@ public class Main {
             Employee emp = new Employee("Nevagnooooooooooo", "Nevagno", 50);
             emp.PrintEmpoyee();
         }
-        catch(FieldLengthLimitException ex){
+        catch(CorrectDataException ex){
             System.out.println(ex.getMessage());
         }
 
@@ -20,7 +20,7 @@ public class Main {
             Employee emp = new Employee("Jimmy", "Neutron", -100);
             emp.PrintEmpoyee();
         }
-        catch(FieldLengthLimitException ex){
+        catch(CorrectDataException ex){
             System.out.println(ex.getMessage());
         }
     }

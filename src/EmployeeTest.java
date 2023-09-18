@@ -16,7 +16,7 @@ public class EmployeeTest {
         try{
             testEmp = new Employee(name, surname, salary);
         }
-        catch (FieldLengthLimitException ex){
+        catch (CorrectDataException ex){
             Logger.getLogger(EmployeeTest.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -31,7 +31,7 @@ public class EmployeeTest {
         String surname = "Gosling";
         double salary = 1000;
 
-        FieldLengthLimitException thrown = assertThrows(FieldLengthLimitException.class, () -> new Employee(name, surname, salary));
+        CorrectDataException thrown = assertThrows(CorrectDataException.class, () -> new Employee(name, surname, salary));
 
         assertTrue(thrown.getMessage().contains("Too much sumbols in name!\n"));
     }
@@ -42,7 +42,7 @@ public class EmployeeTest {
         String surname = "Gosling1111111111111111111111";
         double salary = 1000;
 
-        FieldLengthLimitException thrown = assertThrows(FieldLengthLimitException.class, () -> new Employee(name, surname, salary));
+        CorrectDataException thrown = assertThrows(CorrectDataException.class, () -> new Employee(name, surname, salary));
 
         assertTrue(thrown.getMessage().contains("Too much sumbols in surname!\n"));
     }
@@ -53,7 +53,7 @@ public class EmployeeTest {
         String surname = "Gosling";
         double salary = -1000;
 
-        FieldLengthLimitException thrown = assertThrows(FieldLengthLimitException.class, () -> new Employee(name, surname, salary));
+        CorrectDataException thrown = assertThrows(CorrectDataException.class, () -> new Employee(name, surname, salary));
 
         assertTrue(thrown.getMessage().contains("Salary cannot be negative!\n"));
     }
